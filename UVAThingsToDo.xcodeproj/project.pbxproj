@@ -27,7 +27,7 @@
 		A5DEED221BDF161600811D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5DEED281BDF178000811D18 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		A5DEED2A1BDF1C6300811D18 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
-		A5DEED2C1BDF243F00811D18 /* successful sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "successful sound effect.mp3"; path = "../../Downloads/successful sound effect.mp3"; sourceTree = "<group>"; };
+		A5DEED2C1BDF243F00811D18 /* successful sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "successful sound effect.mp3"; path = "../../../Downloads/successful sound effect.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,6 @@
 		A5DEED0A1BDF161600811D18 = {
 			isa = PBXGroup;
 			children = (
-				A5DEED2C1BDF243F00811D18 /* successful sound effect.mp3 */,
 				A5DEED151BDF161600811D18 /* UVAThingsToDo */,
 				A5DEED141BDF161600811D18 /* Products */,
 			);
@@ -69,6 +68,7 @@
 				A5DEED1D1BDF161600811D18 /* Assets.xcassets */,
 				A5DEED1F1BDF161600811D18 /* LaunchScreen.storyboard */,
 				A5DEED221BDF161600811D18 /* Info.plist */,
+				A5DEED2C1BDF243F00811D18 /* successful sound effect.mp3 */,
 			);
 			path = UVAThingsToDo;
 			sourceTree = "<group>";
