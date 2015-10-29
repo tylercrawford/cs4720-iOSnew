@@ -17,11 +17,13 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBOutlet weak var ItemTitleLabel: UILabel!
     @IBOutlet weak var ItemDescriptionLabel: UILabel!
+    @IBOutlet weak var ShareButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ItemTitleLabel.text! = itemTitle
         ItemDescriptionLabel.text! = itemDescription
+        ShareButton.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +36,8 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func playSound(sender: UIButton) {
+        
+        ShareButton.hidden = false
         
         var audioFilePath = NSBundle.mainBundle().pathForResource("successful sound effect", ofType: "mp3")
         
@@ -53,6 +57,17 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         } else {
             print("audio file is not found")
         }
+    }
+    
+    @IBAction func shareButtonNew(sender: UIButton) {
+        let title = ItemTitleLabel.text
+        let description = ItemDescriptionLabel.text
+        
+        let returnstring = "I just completed " + title! + "\n" + description!
+        print(returnstring)
+        let activityViewController = UIActivityViewController(activityItems: [returnstring as! NSString], applicationActivities: nil)
+        
+        presentViewController(activityViewController, animated: true, completion :{})
     }
     
 

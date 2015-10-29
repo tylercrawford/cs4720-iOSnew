@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5658BD41BE1A83D0090DC8B /* successful sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5658BD31BE1A83D0090DC8B /* successful sound effect.mp3 */; };
 		A5DEED171BDF161600811D18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED161BDF161600811D18 /* AppDelegate.swift */; };
 		A5DEED191BDF161600811D18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED181BDF161600811D18 /* ViewController.swift */; };
 		A5DEED1C1BDF161600811D18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DEED1A1BDF161600811D18 /* Main.storyboard */; };
@@ -14,10 +15,10 @@
 		A5DEED211BDF161600811D18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DEED1F1BDF161600811D18 /* LaunchScreen.storyboard */; };
 		A5DEED291BDF178000811D18 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED281BDF178000811D18 /* MainTableViewController.swift */; };
 		A5DEED2B1BDF1C6300811D18 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED2A1BDF1C6300811D18 /* ItemDetailsViewController.swift */; };
-		A5DEED2D1BDF243F00811D18 /* successful sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5DEED2C1BDF243F00811D18 /* successful sound effect.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5658BD31BE1A83D0090DC8B /* successful sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "successful sound effect.mp3"; sourceTree = SOURCE_ROOT; };
 		A5DEED131BDF161600811D18 /* UVAThingsToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVAThingsToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DEED161BDF161600811D18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5DEED181BDF161600811D18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		A5DEED221BDF161600811D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5DEED281BDF178000811D18 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		A5DEED2A1BDF1C6300811D18 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
-		A5DEED2C1BDF243F00811D18 /* successful sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "successful sound effect.mp3"; path = "../../../Downloads/successful sound effect.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				A5DEED1D1BDF161600811D18 /* Assets.xcassets */,
 				A5DEED1F1BDF161600811D18 /* LaunchScreen.storyboard */,
 				A5DEED221BDF161600811D18 /* Info.plist */,
-				A5DEED2C1BDF243F00811D18 /* successful sound effect.mp3 */,
+				A5658BD31BE1A83D0090DC8B /* successful sound effect.mp3 */,
 			);
 			path = UVAThingsToDo;
 			sourceTree = "<group>";
@@ -105,7 +105,7 @@
 				TargetAttributes = {
 					A5DEED121BDF161600811D18 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 34KMTNV5M5;
+						DevelopmentTeam = 6UZE5ZCXC6;
 					};
 				};
 			};
@@ -135,7 +135,7 @@
 				A5DEED211BDF161600811D18 /* LaunchScreen.storyboard in Resources */,
 				A5DEED1E1BDF161600811D18 /* Assets.xcassets in Resources */,
 				A5DEED1C1BDF161600811D18 /* Main.storyboard in Resources */,
-				A5DEED2D1BDF243F00811D18 /* successful sound effect.mp3 in Resources */,
+				A5658BD41BE1A83D0090DC8B /* successful sound effect.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +305,7 @@
 				A5DEED271BDF161600811D18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
