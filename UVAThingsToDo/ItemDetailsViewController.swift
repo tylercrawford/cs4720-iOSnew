@@ -8,12 +8,15 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer:AVAudioPlayer!
     var itemTitle = "hi there"
     var itemDescription = "hello"
+    var index = 0
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     @IBOutlet weak var ItemTitleLabel: UILabel!
     @IBOutlet weak var ItemDescriptionLabel: UILabel!
@@ -21,9 +24,23 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ItemTitleLabel.text! = itemTitle
-        ItemDescriptionLabel.text! = itemDescription
-        ShareButton.hidden = true
+        
+        let fetchRequest = NSFetchRequest(entityName: "Item")
+//        let predicate = NSPredicate(format: "title == %@", "Dining Hall Marathon")
+//        fetchRequest.predicate = predicate
+        do {
+            let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
+            for item in items {
+                if item.item_title == itemTitle {
+                    ItemTitleLabel.text! = itemTitle
+                    ItemDescriptionLabel.text! = item.item_description!
+                    ShareButton.hidden = true
+                    print(item.item_completed)
+                }
+            }
+        } catch let error as NSError {
+            print (error)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +55,26 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
     @IBAction func playSound(sender: UIButton) {
         
         ShareButton.hidden = false
+        
+        let fetchRequest = NSFetchRequest(entityName: "Item")
+        //        let predicate = NSPredicate(format: "title == %@", "Dining Hall Marathon")
+        //        fetchRequest.predicate = predicate
+        do {
+            let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
+            for item in items {
+                if item.item_title == itemTitle {
+                    item.item_completed = true
+                    do{
+                        try managedObjectContext.save()
+                    } catch let error as NSError{
+                        print("Failed to save the new person. Error = \(error)")
+                    }
+                    print(item.item_completed)
+                }
+            }
+        } catch let error as NSError {
+            print (error)
+        }
         
         var audioFilePath = NSBundle.mainBundle().pathForResource("successful sound effect", ofType: "mp3")
         

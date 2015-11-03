@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10152361BE8609300A12510 /* ItemModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A10152341BE8609300A12510 /* ItemModel.xcdatamodeld */; };
+		A10152391BE864B700A12510 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10152371BE864B700A12510 /* Item+CoreDataProperties.swift */; };
+		A101523A1BE864B700A12510 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10152381BE864B700A12510 /* Item.swift */; };
+		A101523C1BE875B400A12510 /* inputData.csv in Resources */ = {isa = PBXBuildFile; fileRef = A101523B1BE875B300A12510 /* inputData.csv */; };
 		A5658BD41BE1A83D0090DC8B /* successful sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5658BD31BE1A83D0090DC8B /* successful sound effect.mp3 */; };
 		A5DEED171BDF161600811D18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED161BDF161600811D18 /* AppDelegate.swift */; };
 		A5DEED191BDF161600811D18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED181BDF161600811D18 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10152351BE8609300A12510 /* ItemModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ItemModel.xcdatamodel; sourceTree = "<group>"; };
+		A10152371BE864B700A12510 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A10152381BE864B700A12510 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A101523B1BE875B300A12510 /* inputData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputData.csv; sourceTree = "<group>"; };
 		A5658BD31BE1A83D0090DC8B /* successful sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "successful sound effect.mp3"; sourceTree = SOURCE_ROOT; };
 		A5DEED131BDF161600811D18 /* UVAThingsToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVAThingsToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DEED161BDF161600811D18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,10 +69,14 @@
 			isa = PBXGroup;
 			children = (
 				A5DEED161BDF161600811D18 /* AppDelegate.swift */,
+				A10152371BE864B700A12510 /* Item+CoreDataProperties.swift */,
+				A10152381BE864B700A12510 /* Item.swift */,
+				A10152341BE8609300A12510 /* ItemModel.xcdatamodeld */,
 				A5DEED181BDF161600811D18 /* ViewController.swift */,
 				A5DEED1A1BDF161600811D18 /* Main.storyboard */,
 				A5DEED2A1BDF1C6300811D18 /* ItemDetailsViewController.swift */,
 				A5DEED281BDF178000811D18 /* MainTableViewController.swift */,
+				A101523B1BE875B300A12510 /* inputData.csv */,
 				A5DEED1D1BDF161600811D18 /* Assets.xcassets */,
 				A5DEED1F1BDF161600811D18 /* LaunchScreen.storyboard */,
 				A5DEED221BDF161600811D18 /* Info.plist */,
@@ -105,7 +117,7 @@
 				TargetAttributes = {
 					A5DEED121BDF161600811D18 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 6UZE5ZCXC6;
+						DevelopmentTeam = 34KMTNV5M5;
 					};
 				};
 			};
@@ -133,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5DEED211BDF161600811D18 /* LaunchScreen.storyboard in Resources */,
+				A101523C1BE875B400A12510 /* inputData.csv in Resources */,
 				A5DEED1E1BDF161600811D18 /* Assets.xcassets in Resources */,
 				A5DEED1C1BDF161600811D18 /* Main.storyboard in Resources */,
 				A5658BD41BE1A83D0090DC8B /* successful sound effect.mp3 in Resources */,
@@ -146,8 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10152391BE864B700A12510 /* Item+CoreDataProperties.swift in Sources */,
 				A5DEED191BDF161600811D18 /* ViewController.swift in Sources */,
 				A5DEED291BDF178000811D18 /* MainTableViewController.swift in Sources */,
+				A10152361BE8609300A12510 /* ItemModel.xcdatamodeld in Sources */,
+				A101523A1BE864B700A12510 /* Item.swift in Sources */,
 				A5DEED2B1BDF1C6300811D18 /* ItemDetailsViewController.swift in Sources */,
 				A5DEED171BDF161600811D18 /* AppDelegate.swift in Sources */,
 			);
@@ -308,6 +324,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A10152341BE8609300A12510 /* ItemModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A10152351BE8609300A12510 /* ItemModel.xcdatamodel */,
+			);
+			currentVersion = A10152351BE8609300A12510 /* ItemModel.xcdatamodel */;
+			path = ItemModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A5DEED0B1BDF161600811D18 /* Project object */;
 }
