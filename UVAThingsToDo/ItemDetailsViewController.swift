@@ -9,33 +9,47 @@
 import UIKit
 import AVFoundation
 import CoreData
+import CoreLocation
 
-class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
+class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate, CLLocationManagerDelegate {
+    
+    var locationManager: CLLocationManager?
     
     var audioPlayer:AVAudioPlayer!
     var itemTitle = "hi there"
     var itemDescription = "hello"
     var index = 0
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    var latitude = 0.0
+    var longitude = 0.0
 
     @IBOutlet weak var ItemTitleLabel: UILabel!
     @IBOutlet weak var ItemDescriptionLabel: UILabel!
     @IBOutlet weak var ShareButton: UIButton!
+    @IBOutlet weak var LatitudeLabel: UILabel!
+    @IBOutlet weak var LongitudeLabel: UILabel!
+    @IBOutlet weak var CompletedButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let fetchRequest = NSFetchRequest(entityName: "Item")
-//        let predicate = NSPredicate(format: "title == %@", "Dining Hall Marathon")
-//        fetchRequest.predicate = predicate
         do {
             let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
             for item in items {
                 if item.item_title == itemTitle {
                     ItemTitleLabel.text! = itemTitle
                     ItemDescriptionLabel.text! = item.item_description!
-                    ShareButton.hidden = true
-                    print(item.item_completed)
+                    
+                    if item.item_completed == 1 {
+                        LatitudeLabel.text = "Latitude: " + String(item.item_latitude!)
+                        LongitudeLabel.text = "Longitude: " + String(item.item_longitude!)
+                        CompletedButton.hidden = true
+                    } else {
+                        LatitudeLabel.hidden = true
+                        LongitudeLabel.hidden = true
+                        ShareButton.hidden = true
+                    }
                 }
             }
         } catch let error as NSError {
@@ -48,33 +62,128 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if locations.count == 0{
+            //handle error here
+            return
+        }
+        
+        let newLocation = locations[0]
+        
+        latitude = newLocation.coordinate.latitude
+        longitude = newLocation.coordinate.longitude
+        
+    }
+    
+    func locationManager(manager: CLLocationManager,
+        didFailWithError error: NSError){
+            print("Location manager failed with error = \(error)")
+    }
+    
+    func locationManager(manager: CLLocationManager,
+        didChangeAuthorizationStatus status: CLAuthorizationStatus){
+            
+            print("The authorization status of location services is changed to: ", terminator: "")
+            
+            switch CLLocationManager.authorizationStatus(){
+            case .AuthorizedAlways:
+                print("Authorized")
+            case .AuthorizedWhenInUse:
+                print("Authorized when in use")
+                manager.startUpdatingLocation()
+            case .Denied:
+                print("Denied")
+            case .NotDetermined:
+                print("Not determined")
+            case .Restricted:
+                print("Restricted")
+            }
+            
+    }
+
+    func createLocationManager(startImmediately startImmediately: Bool){
+        locationManager = CLLocationManager()
+        if let manager = locationManager{
+            print("Successfully created the location manager")
+            manager.delegate = self
+            
+            if startImmediately{
+                manager.startUpdatingLocation()
+            }
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        /* Are location services available on this device? */
+        if CLLocationManager.locationServicesEnabled(){
+            
+            /* Do we have authorization to access location services? */
+            switch CLLocationManager.authorizationStatus(){
+            case .AuthorizedAlways:
+                /* Yes, always */
+                createLocationManager(startImmediately: true)
+            case .AuthorizedWhenInUse:
+                /* Yes, only when our app is in use */
+                createLocationManager(startImmediately: true)
+            case .Denied:
+                /* No */
+                print("Location services are not allowed for this app")
+            case .NotDetermined:
+                /* We don't know yet, we have to ask */
+                createLocationManager(startImmediately: false)
+                if let manager = self.locationManager{
+                    manager.requestWhenInUseAuthorization()
+                }
+            case .Restricted:
+                /* Restrictions have been applied, we have no access
+                to location services */
+                print("Location services are not allowed for this app")
+            }
+            
+            
+        } else {
+            /* Location services are not enabled.
+            Take appropriate action: for instance, prompt the
+            user to enable the location services */
+            print("Location services are not enabled")
+        }
+    }
+    
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         print("Finished playing the song")
     }
     
-    @IBAction func playSound(sender: UIButton) {
+    @IBAction func completed(sender: UIButton) {
         
         ShareButton.hidden = false
         
         let fetchRequest = NSFetchRequest(entityName: "Item")
-        //        let predicate = NSPredicate(format: "title == %@", "Dining Hall Marathon")
-        //        fetchRequest.predicate = predicate
         do {
             let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
             for item in items {
                 if item.item_title == itemTitle {
                     item.item_completed = true
+                    item.item_latitude = latitude
+                    item.item_longitude = longitude
                     do{
                         try managedObjectContext.save()
                     } catch let error as NSError{
                         print("Failed to save the new person. Error = \(error)")
                     }
-                    print(item.item_completed)
                 }
             }
         } catch let error as NSError {
             print (error)
         }
+        
+        CompletedButton.hidden = true
+        LatitudeLabel.hidden = false
+        LongitudeLabel.hidden = false
+        LatitudeLabel.text = "Latitude: " + String(latitude)
+        LongitudeLabel.text = "Longitude: " + String(longitude)
         
         var audioFilePath = NSBundle.mainBundle().pathForResource("successful sound effect", ofType: "mp3")
         
@@ -106,6 +215,7 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate {
         
         presentViewController(activityViewController, animated: true, completion :{})
     }
+    
     
 
     /*

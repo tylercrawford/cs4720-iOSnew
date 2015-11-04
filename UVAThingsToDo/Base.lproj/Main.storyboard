@@ -122,7 +122,7 @@
                                 <rect key="frame" x="20" y="550" width="76" height="30"/>
                                 <state key="normal" title="Completed"/>
                                 <connections>
-                                    <action selector="playSound:" destination="C3l-dT-hBZ" eventType="touchUpInside" id="Cz1-tB-5fi"/>
+                                    <action selector="completed:" destination="C3l-dT-hBZ" eventType="touchUpInside" id="3d4-Vq-lUC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G1-LX-KMP">
@@ -132,6 +132,18 @@
                                     <action selector="shareButtonNew:" destination="C3l-dT-hBZ" eventType="touchUpInside" id="TU7-Dw-aX4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5l-Ak-h7d">
+                                <rect key="frame" x="20" y="422" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dev-yE-imI">
+                                <rect key="frame" x="20" y="352" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -144,8 +156,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="UVA Things to Do" id="FdU-gm-n6b"/>
                     <connections>
+                        <outlet property="CompletedButton" destination="pNm-Kl-MfP" id="hWu-pN-b8P"/>
                         <outlet property="ItemDescriptionLabel" destination="cXe-B2-e4f" id="bAF-wt-WKj"/>
                         <outlet property="ItemTitleLabel" destination="F8C-ma-Fia" id="Om8-oT-NEs"/>
+                        <outlet property="LatitudeLabel" destination="dev-yE-imI" id="tCS-MO-NWF"/>
+                        <outlet property="LongitudeLabel" destination="o5l-Ak-h7d" id="M80-kx-ErV"/>
                         <outlet property="ShareButton" destination="8G1-LX-KMP" id="FcP-Ac-r6P"/>
                     </connections>
                 </viewController>

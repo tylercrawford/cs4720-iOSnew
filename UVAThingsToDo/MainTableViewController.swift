@@ -16,6 +16,12 @@ class MainTableViewController: UITableViewController {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var titles: [String] = []
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,12 +53,29 @@ class MainTableViewController: UITableViewController {
         return titles.count
     }
     
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(
             "cell",
             forIndexPath: indexPath) //make the cell
         
         let row = indexPath.row
+        
+        let fetchRequest = NSFetchRequest(entityName: "Item")
+        let fetchPredicate = NSPredicate(format: "item_title = %@", titles[row])
+        fetchRequest.predicate = fetchPredicate
+        
+        do {
+            let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
+            for item in items {
+                if item.item_completed == 1 {
+                    cell.textLabel!.textColor = UIColor.greenColor()
+                }
+            }
+            
+        } catch let error as NSError {
+            print (error)
+        }
         
         cell.textLabel!.text = titles[row]
         cell.detailTextLabel!.text = ""
@@ -71,10 +94,6 @@ class MainTableViewController: UITableViewController {
 //            vc.itemDescription = description
             //vc.index = index
         }
-    }
-    
-    func createItems() {
-        
     }
     
 
