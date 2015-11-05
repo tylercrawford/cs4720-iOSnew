@@ -11,12 +11,16 @@
 		A10152391BE864B700A12510 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10152371BE864B700A12510 /* Item+CoreDataProperties.swift */; };
 		A101523A1BE864B700A12510 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10152381BE864B700A12510 /* Item.swift */; };
 		A101523C1BE875B400A12510 /* inputData.csv in Resources */ = {isa = PBXBuildFile; fileRef = A101523B1BE875B300A12510 /* inputData.csv */; };
-		A1EFA62B1BE9D0BF00639ABE /* UVA_Rotunda_Logo80.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = A1EFA62A1BE9D0BF00639ABE /* UVA_Rotunda_Logo80.svg.png */; };
-		A1EFA62D1BE9D0CB00639ABE /* UVA_Rotunda_Logo120.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A1EFA62C1BE9D0CB00639ABE /* UVA_Rotunda_Logo120.svg copy.png */; };
-		A1EFA62F1BE9D11D00639ABE /* UVA_Rotunda_Logo58.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A1EFA62E1BE9D11D00639ABE /* UVA_Rotunda_Logo58.svg copy.png */; };
-		A1EFA6311BE9D19B00639ABE /* UVA_Rotunda_Logo87.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A1EFA6301BE9D19B00639ABE /* UVA_Rotunda_Logo87.svg copy.png */; };
-		A1EFA6331BE9D1CC00639ABE /* UVA_Rotunda_Logo180.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A1EFA6321BE9D1CC00639ABE /* UVA_Rotunda_Logo180.svg copy.png */; };
 		A5658BD41BE1A83D0090DC8B /* successful sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5658BD31BE1A83D0090DC8B /* successful sound effect.mp3 */; };
+		A58B5F1A1BEAF63F001F64D0 /* UVA_Rotunda_Logo80.svg-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F191BEAF63F001F64D0 /* UVA_Rotunda_Logo80.svg-1.png */; };
+		A58B5F231BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F1B1BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy.png */; };
+		A58B5F241BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F1C1BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy-1.png */; };
+		A58B5F251BEAF6DA001F64D0 /* UVA_Rotunda_Logo80.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F1D1BEAF6DA001F64D0 /* UVA_Rotunda_Logo80.svg.png */; };
+		A58B5F261BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F1E1BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy.png */; };
+		A58B5F271BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy-1-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F1F1BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy-1-2.png */; };
+		A58B5F281BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F201BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png */; };
+		A58B5F291BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F211BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png */; };
+		A58B5F2A1BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F221BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png */; };
 		A5DEED171BDF161600811D18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED161BDF161600811D18 /* AppDelegate.swift */; };
 		A5DEED191BDF161600811D18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED181BDF161600811D18 /* ViewController.swift */; };
 		A5DEED1C1BDF161600811D18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DEED1A1BDF161600811D18 /* Main.storyboard */; };
@@ -31,12 +35,16 @@
 		A10152371BE864B700A12510 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A10152381BE864B700A12510 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A101523B1BE875B300A12510 /* inputData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputData.csv; sourceTree = "<group>"; };
-		A1EFA62A1BE9D0BF00639ABE /* UVA_Rotunda_Logo80.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UVA_Rotunda_Logo80.svg.png; path = ../../../Downloads/UVA_Rotunda_Logo80.svg.png; sourceTree = "<group>"; };
-		A1EFA62C1BE9D0CB00639ABE /* UVA_Rotunda_Logo120.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UVA_Rotunda_Logo120.svg copy.png"; path = "../../../Downloads/UVA_Rotunda_Logo120.svg copy.png"; sourceTree = "<group>"; };
-		A1EFA62E1BE9D11D00639ABE /* UVA_Rotunda_Logo58.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UVA_Rotunda_Logo58.svg copy.png"; path = "../../../Downloads/UVA_Rotunda_Logo58.svg copy.png"; sourceTree = "<group>"; };
-		A1EFA6301BE9D19B00639ABE /* UVA_Rotunda_Logo87.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UVA_Rotunda_Logo87.svg copy.png"; path = "../../../Downloads/UVA_Rotunda_Logo87.svg copy.png"; sourceTree = "<group>"; };
-		A1EFA6321BE9D1CC00639ABE /* UVA_Rotunda_Logo180.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UVA_Rotunda_Logo180.svg copy.png"; path = "../../../Downloads/UVA_Rotunda_Logo180.svg copy.png"; sourceTree = "<group>"; };
 		A5658BD31BE1A83D0090DC8B /* successful sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "successful sound effect.mp3"; sourceTree = SOURCE_ROOT; };
+		A58B5F191BEAF63F001F64D0 /* UVA_Rotunda_Logo80.svg-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo80.svg-1.png"; sourceTree = "<group>"; };
+		A58B5F1B1BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo87.svg copy.png"; sourceTree = "<group>"; };
+		A58B5F1C1BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo87.svg copy-1.png"; sourceTree = "<group>"; };
+		A58B5F1D1BEAF6DA001F64D0 /* UVA_Rotunda_Logo80.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UVA_Rotunda_Logo80.svg.png; sourceTree = "<group>"; };
+		A58B5F1E1BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo58.svg copy.png"; sourceTree = "<group>"; };
+		A58B5F1F1BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy-1-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo58.svg copy-1-2.png"; sourceTree = "<group>"; };
+		A58B5F201BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo180.svg copy.png"; sourceTree = "<group>"; };
+		A58B5F211BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo120.svg copy.png"; sourceTree = "<group>"; };
+		A58B5F221BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo120.svg copy-1-2.png"; sourceTree = "<group>"; };
 		A5DEED131BDF161600811D18 /* UVAThingsToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVAThingsToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DEED161BDF161600811D18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5DEED181BDF161600811D18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,11 +86,15 @@
 		A5DEED151BDF161600811D18 /* UVAThingsToDo */ = {
 			isa = PBXGroup;
 			children = (
-				A1EFA6321BE9D1CC00639ABE /* UVA_Rotunda_Logo180.svg copy.png */,
-				A1EFA6301BE9D19B00639ABE /* UVA_Rotunda_Logo87.svg copy.png */,
-				A1EFA62E1BE9D11D00639ABE /* UVA_Rotunda_Logo58.svg copy.png */,
-				A1EFA62C1BE9D0CB00639ABE /* UVA_Rotunda_Logo120.svg copy.png */,
-				A1EFA62A1BE9D0BF00639ABE /* UVA_Rotunda_Logo80.svg.png */,
+				A58B5F191BEAF63F001F64D0 /* UVA_Rotunda_Logo80.svg-1.png */,
+				A58B5F1B1BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy.png */,
+				A58B5F1C1BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy-1.png */,
+				A58B5F1D1BEAF6DA001F64D0 /* UVA_Rotunda_Logo80.svg.png */,
+				A58B5F1E1BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy.png */,
+				A58B5F1F1BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy-1-2.png */,
+				A58B5F201BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png */,
+				A58B5F211BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png */,
+				A58B5F221BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png */,
 				A5DEED161BDF161600811D18 /* AppDelegate.swift */,
 				A10152371BE864B700A12510 /* Item+CoreDataProperties.swift */,
 				A10152381BE864B700A12510 /* Item.swift */,
@@ -159,16 +171,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1EFA62F1BE9D11D00639ABE /* UVA_Rotunda_Logo58.svg copy.png in Resources */,
 				A5DEED211BDF161600811D18 /* LaunchScreen.storyboard in Resources */,
-				A1EFA62B1BE9D0BF00639ABE /* UVA_Rotunda_Logo80.svg.png in Resources */,
 				A101523C1BE875B400A12510 /* inputData.csv in Resources */,
-				A1EFA6331BE9D1CC00639ABE /* UVA_Rotunda_Logo180.svg copy.png in Resources */,
 				A5DEED1E1BDF161600811D18 /* Assets.xcassets in Resources */,
 				A5DEED1C1BDF161600811D18 /* Main.storyboard in Resources */,
-				A1EFA62D1BE9D0CB00639ABE /* UVA_Rotunda_Logo120.svg copy.png in Resources */,
 				A5658BD41BE1A83D0090DC8B /* successful sound effect.mp3 in Resources */,
-				A1EFA6311BE9D19B00639ABE /* UVA_Rotunda_Logo87.svg copy.png in Resources */,
+				A58B5F231BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy.png in Resources */,
+				A58B5F291BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png in Resources */,
+				A58B5F261BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy.png in Resources */,
+				A58B5F2A1BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png in Resources */,
+				A58B5F251BEAF6DA001F64D0 /* UVA_Rotunda_Logo80.svg.png in Resources */,
+				A58B5F241BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy-1.png in Resources */,
+				A58B5F1A1BEAF63F001F64D0 /* UVA_Rotunda_Logo80.svg-1.png in Resources */,
+				A58B5F281BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png in Resources */,
+				A58B5F271BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy-1-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
