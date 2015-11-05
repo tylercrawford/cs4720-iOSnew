@@ -18,6 +18,7 @@ extension Item {
     @NSManaged var item_description: String?
     @NSManaged var item_completed: NSNumber?
     @NSManaged var item_date: NSDate?
+    @NSManaged var item_index: NSNumber?
     @NSManaged var item_latitude: NSNumber?
     @NSManaged var item_longitude: NSNumber?
     @NSManaged var item_image: NSData?

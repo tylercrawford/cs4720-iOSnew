@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
          let defaults = NSUserDefaults.standardUserDefaults()
-//        defaults.setBool(false, forKey: "isPreloaded")
+         //defaults.setBool(false, forKey: "isPreloaded")
          let isPreloaded = defaults.boolForKey("isPreloaded")
         
          if !isPreloaded {
@@ -227,6 +227,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             theItem.item_title = data
             theItem.item_description = descriptions[i]
             theItem.item_completed = false
+            theItem.item_index = i
             i += 1
             
             /*if managedObjectContext.save(&error) != true {

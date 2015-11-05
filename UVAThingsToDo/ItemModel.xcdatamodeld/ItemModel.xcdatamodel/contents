@@ -5,11 +5,12 @@
         <attribute name="item_date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="item_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="item_image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="item_index" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="item_latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="item_longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="item_title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>

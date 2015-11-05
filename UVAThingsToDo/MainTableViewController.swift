@@ -14,7 +14,9 @@ class MainTableViewController: UITableViewController {
     
 
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    var titles: [String] = []
+    var titles: [String] = [
+        "","","","","","","","","","","","","","","","","","",""
+    ]
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,7 +33,8 @@ class MainTableViewController: UITableViewController {
         do {
             let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
             for item in items {
-                titles.append(item.item_title!)
+                let index = item.item_index! as Int
+                titles[index] = item.item_title!
             }
         } catch let error as NSError {
             print (error)
@@ -58,18 +61,23 @@ class MainTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(
             "cell",
             forIndexPath: indexPath) //make the cell
-        
         let row = indexPath.row
-        
         let fetchRequest = NSFetchRequest(entityName: "Item")
         let fetchPredicate = NSPredicate(format: "item_title = %@", titles[row])
         fetchRequest.predicate = fetchPredicate
-        
+        var first = true
         do {
             let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
+            print(items)
             for item in items {
-                if item.item_completed == 1 {
-                    cell.textLabel!.textColor = UIColor.greenColor()
+                if (first) {
+                    if item.item_completed == 1 && item.item_index == row {
+                        cell.textLabel!.textColor = UIColor.greenColor()
+                    }
+                    else {
+                        cell.textLabel!.textColor = UIColor.blackColor()
+                    }
+                    first = false
                 }
             }
             
