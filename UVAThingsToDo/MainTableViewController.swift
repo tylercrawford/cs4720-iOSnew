@@ -15,7 +15,11 @@ class MainTableViewController: UITableViewController {
 
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var titles: [String] = [
-        "","","","","","","","","","","","","","","","","","",""
+        "","","","","","","","","","","","","","","","","","","","",
+        "","","","","","","","","","","","","","","","","","","","",
+        "","","","","","","","","","","","","","","","","","","","",
+        "","","","","","","","","","","","","","","","","","","","",
+        "","","","","","","","","","","","","","","","","","","",""
     ]
     
     override func viewWillAppear(animated: Bool) {
@@ -91,16 +95,23 @@ class MainTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let index = tableView.indexPathForSelectedRow!
-        var title = titles[index.row]
-//        var description = descriptions[index.row]
-        if segue.identifier == "viewItem" {
-            let vc = segue.destinationViewController as! ItemDetailsViewController
-            //vc.title = title
-            vc.itemTitle = title
-//            vc.itemDescription = description
-            //vc.index = index
+        let index = tableView.indexPathForSelectedRow
+        if index != nil {
+            let title = titles[index!.row]
+            //        var description = descriptions[index.row]
+            if segue.identifier == "viewItem" {
+                let vc = segue.destinationViewController as! ItemDetailsViewController
+                //vc.title = title
+                vc.itemTitle = title
+                //            vc.itemDescription = description
+                //vc.index = index
+            }
         }
+        
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
     }
     
 

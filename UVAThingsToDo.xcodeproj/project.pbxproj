@@ -21,6 +21,13 @@
 		A58B5F281BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F201BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png */; };
 		A58B5F291BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F211BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png */; };
 		A58B5F2A1BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B5F221BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png */; };
+		A598838D1BFA7608003679A3 /* UVA_Rotunda.png in Resources */ = {isa = PBXBuildFile; fileRef = A598838C1BFA7608003679A3 /* UVA_Rotunda.png */; };
+		A598838F1BFA7CA1003679A3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598838E1BFA7CA1003679A3 /* ProgressViewController.swift */; };
+		A59883911BFA8859003679A3 /* BronzeCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = A59883901BFA8859003679A3 /* BronzeCoin.png */; };
+		A59883961BFA8870003679A3 /* GoldCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = A59883921BFA8870003679A3 /* GoldCoin.png */; };
+		A59883971BFA8870003679A3 /* PlatinumCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = A59883931BFA8870003679A3 /* PlatinumCoin.png */; };
+		A59883981BFA8870003679A3 /* SilverCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = A59883941BFA8870003679A3 /* SilverCoin.png */; };
+		A59883991BFA8870003679A3 /* TinCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = A59883951BFA8870003679A3 /* TinCoin.png */; };
 		A5DEED171BDF161600811D18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED161BDF161600811D18 /* AppDelegate.swift */; };
 		A5DEED191BDF161600811D18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEED181BDF161600811D18 /* ViewController.swift */; };
 		A5DEED1C1BDF161600811D18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DEED1A1BDF161600811D18 /* Main.storyboard */; };
@@ -45,6 +52,13 @@
 		A58B5F201BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo180.svg copy.png"; sourceTree = "<group>"; };
 		A58B5F211BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo120.svg copy.png"; sourceTree = "<group>"; };
 		A58B5F221BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UVA_Rotunda_Logo120.svg copy-1-2.png"; sourceTree = "<group>"; };
+		A598838C1BFA7608003679A3 /* UVA_Rotunda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UVA_Rotunda.png; sourceTree = "<group>"; };
+		A598838E1BFA7CA1003679A3 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		A59883901BFA8859003679A3 /* BronzeCoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BronzeCoin.png; sourceTree = "<group>"; };
+		A59883921BFA8870003679A3 /* GoldCoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoldCoin.png; sourceTree = "<group>"; };
+		A59883931BFA8870003679A3 /* PlatinumCoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlatinumCoin.png; sourceTree = "<group>"; };
+		A59883941BFA8870003679A3 /* SilverCoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SilverCoin.png; sourceTree = "<group>"; };
+		A59883951BFA8870003679A3 /* TinCoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TinCoin.png; sourceTree = "<group>"; };
 		A5DEED131BDF161600811D18 /* UVAThingsToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVAThingsToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DEED161BDF161600811D18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5DEED181BDF161600811D18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,12 +109,19 @@
 				A58B5F201BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png */,
 				A58B5F211BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png */,
 				A58B5F221BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png */,
+				A598838C1BFA7608003679A3 /* UVA_Rotunda.png */,
+				A59883921BFA8870003679A3 /* GoldCoin.png */,
+				A59883931BFA8870003679A3 /* PlatinumCoin.png */,
+				A59883941BFA8870003679A3 /* SilverCoin.png */,
+				A59883951BFA8870003679A3 /* TinCoin.png */,
+				A59883901BFA8859003679A3 /* BronzeCoin.png */,
 				A5DEED161BDF161600811D18 /* AppDelegate.swift */,
 				A10152371BE864B700A12510 /* Item+CoreDataProperties.swift */,
 				A10152381BE864B700A12510 /* Item.swift */,
 				A10152341BE8609300A12510 /* ItemModel.xcdatamodeld */,
 				A5DEED181BDF161600811D18 /* ViewController.swift */,
 				A5DEED1A1BDF161600811D18 /* Main.storyboard */,
+				A598838E1BFA7CA1003679A3 /* ProgressViewController.swift */,
 				A5DEED2A1BDF1C6300811D18 /* ItemDetailsViewController.swift */,
 				A5DEED281BDF178000811D18 /* MainTableViewController.swift */,
 				A101523B1BE875B300A12510 /* inputData.csv */,
@@ -171,19 +192,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59883981BFA8870003679A3 /* SilverCoin.png in Resources */,
 				A5DEED211BDF161600811D18 /* LaunchScreen.storyboard in Resources */,
 				A101523C1BE875B400A12510 /* inputData.csv in Resources */,
 				A5DEED1E1BDF161600811D18 /* Assets.xcassets in Resources */,
 				A5DEED1C1BDF161600811D18 /* Main.storyboard in Resources */,
+				A59883961BFA8870003679A3 /* GoldCoin.png in Resources */,
+				A59883991BFA8870003679A3 /* TinCoin.png in Resources */,
 				A5658BD41BE1A83D0090DC8B /* successful sound effect.mp3 in Resources */,
 				A58B5F231BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy.png in Resources */,
 				A58B5F291BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy.png in Resources */,
+				A598838D1BFA7608003679A3 /* UVA_Rotunda.png in Resources */,
 				A58B5F261BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy.png in Resources */,
 				A58B5F2A1BEAF6DA001F64D0 /* UVA_Rotunda_Logo120.svg copy-1-2.png in Resources */,
+				A59883911BFA8859003679A3 /* BronzeCoin.png in Resources */,
 				A58B5F251BEAF6DA001F64D0 /* UVA_Rotunda_Logo80.svg.png in Resources */,
 				A58B5F241BEAF6DA001F64D0 /* UVA_Rotunda_Logo87.svg copy-1.png in Resources */,
 				A58B5F1A1BEAF63F001F64D0 /* UVA_Rotunda_Logo80.svg-1.png in Resources */,
 				A58B5F281BEAF6DA001F64D0 /* UVA_Rotunda_Logo180.svg copy.png in Resources */,
+				A59883971BFA8870003679A3 /* PlatinumCoin.png in Resources */,
 				A58B5F271BEAF6DA001F64D0 /* UVA_Rotunda_Logo58.svg copy-1-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +225,7 @@
 				A10152391BE864B700A12510 /* Item+CoreDataProperties.swift in Sources */,
 				A5DEED191BDF161600811D18 /* ViewController.swift in Sources */,
 				A5DEED291BDF178000811D18 /* MainTableViewController.swift in Sources */,
+				A598838F1BFA7CA1003679A3 /* ProgressViewController.swift in Sources */,
 				A10152361BE8609300A12510 /* ItemModel.xcdatamodeld in Sources */,
 				A101523A1BE864B700A12510 /* Item.swift in Sources */,
 				A5DEED2B1BDF1C6300811D18 /* ItemDetailsViewController.swift in Sources */,

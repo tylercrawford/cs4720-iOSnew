@@ -18,12 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Can You Complete All 100 Things To Do At UVA Before You Graduate?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS3-Re-rdy">
-                                <rect key="frame" x="20" y="72" width="560" height="130"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLu-Oy-pgp">
                                 <rect key="frame" x="20" y="285" width="560" height="30"/>
                                 <state key="normal" title="Start"/>
@@ -31,6 +25,12 @@
                                     <segue destination="GxH-nu-dhD" kind="show" id="SHO-5Y-Q9U"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Can You Complete All 100 Things To Do At UVA Before You Graduate?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS3-Re-rdy">
+                                <rect key="frame" x="20" y="72" width="560" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -55,11 +55,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="AfP-aB-WuH" detailTextLabel="dGM-im-fSG" style="IBUITableViewCellStyleValue1" id="Io0-7W-snf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="AfP-aB-WuH" detailTextLabel="dGM-im-fSG" style="IBUITableViewCellStyleValue1" id="Io0-7W-snf">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Io0-7W-snf" id="dSC-oB-AE0">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AfP-aB-WuH">
@@ -70,7 +70,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dGM-im-fSG">
-                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <rect key="frame" x="523" y="12" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,7 +88,13 @@
                             <outlet property="delegate" destination="U7r-94-fjd" id="WWG-gJ-vzk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="UVA Things To Do" id="xvO-kd-cOv"/>
+                    <navigationItem key="navigationItem" title="UVA Things To Do" id="xvO-kd-cOv">
+                        <barButtonItem key="rightBarButtonItem" title="Progress" id="Sng-s6-qhZ">
+                            <connections>
+                                <segue destination="5C6-Fj-TB5" kind="show" id="h9i-4D-g0O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUp-32-tVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,7 +164,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNm-Kl-MfP">
-                                                <rect key="frame" x="99" y="291" width="76" height="30"/>
+                                                <rect key="frame" x="189" y="253" width="76" height="30"/>
                                                 <state key="normal" title="Completed"/>
                                                 <connections>
                                                     <action selector="completed:" destination="C3l-dT-hBZ" eventType="touchUpInside" id="3d4-Vq-lUC"/>
@@ -173,8 +179,8 @@
                                             <constraint firstItem="F8C-ma-Fia" firstAttribute="top" secondItem="ANO-qA-f0h" secondAttribute="top" id="Iz1-Ch-x3a"/>
                                             <constraint firstItem="dev-yE-imI" firstAttribute="top" secondItem="49E-ui-JsU" secondAttribute="bottom" constant="20" id="KX3-fz-CXT"/>
                                             <constraint firstAttribute="trailing" secondItem="cXe-B2-e4f" secondAttribute="trailing" constant="27" id="RBF-vF-Wih"/>
-                                            <constraint firstItem="pNm-Kl-MfP" firstAttribute="top" secondItem="49E-ui-JsU" secondAttribute="bottom" constant="10" id="akL-DD-0L6"/>
                                             <constraint firstItem="8G1-LX-KMP" firstAttribute="top" secondItem="o5l-Ak-h7d" secondAttribute="bottom" constant="20" id="bpg-lj-2wO"/>
+                                            <constraint firstItem="pNm-Kl-MfP" firstAttribute="top" secondItem="ILV-DX-Azk" secondAttribute="bottom" constant="15" id="cwz-b3-ARJ"/>
                                             <constraint firstItem="49E-ui-JsU" firstAttribute="top" secondItem="ILV-DX-Azk" secondAttribute="bottom" constant="18" id="gxe-tI-1pR"/>
                                             <constraint firstItem="o5l-Ak-h7d" firstAttribute="top" secondItem="dev-yE-imI" secondAttribute="bottom" constant="15" id="hMb-HN-jDn"/>
                                         </constraints>
@@ -197,7 +203,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="qQJ-Rb-SUB" secondAttribute="trailing" id="i15-HN-gf2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="UVA Things to Do" id="FdU-gm-n6b"/>
+                    <navigationItem key="navigationItem" title="UVA Things to Do" id="FdU-gm-n6b">
+                        <barButtonItem key="rightBarButtonItem" title="Progress" id="Tpu-ZB-Ef7">
+                            <connections>
+                                <segue destination="5C6-Fj-TB5" kind="show" id="PZy-TM-oap"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CompletedButton" destination="pNm-Kl-MfP" id="hWu-pN-b8P"/>
                         <outlet property="ItemDescriptionLabel" destination="cXe-B2-e4f" id="bAF-wt-WKj"/>
@@ -213,6 +225,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q0m-GK-WOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3301" y="346"/>
+        </scene>
+        <!--UVA Things to Do-->
+        <scene sceneID="xto-t9-F5U">
+            <objects>
+                <viewController id="5C6-Fj-TB5" customClass="ProgressViewController" customModule="UVAThingsToDo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gVX-at-kYd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ztf-e1-eZs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i9f-Ga-fFg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJh-rF-D2E">
+                                <rect key="frame" x="20" y="101" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="mfc-ou-Cbh"/>
+                                    <constraint firstAttribute="height" constant="150" id="nFn-p1-uOW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-X2-mdd">
+                                <rect key="frame" x="20" y="237" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rf4-Kt-D1a">
+                                <rect key="frame" x="20" y="260" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFU-4X-zYX">
+                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tFU-4X-zYX" firstAttribute="top" secondItem="gVX-at-kYd" secondAttribute="bottom" constant="5" id="1yp-ET-MD0"/>
+                            <constraint firstItem="tFU-4X-zYX" firstAttribute="leading" secondItem="i9f-Ga-fFg" secondAttribute="leadingMargin" id="7Om-9h-dfg"/>
+                            <constraint firstItem="tFU-4X-zYX" firstAttribute="trailing" secondItem="i9f-Ga-fFg" secondAttribute="trailingMargin" id="K17-oJ-Ogt"/>
+                            <constraint firstItem="PJh-rF-D2E" firstAttribute="centerY" secondItem="i9f-Ga-fFg" secondAttribute="centerY" id="LBc-X1-Mc9"/>
+                            <constraint firstItem="PJh-rF-D2E" firstAttribute="centerX" secondItem="i9f-Ga-fFg" secondAttribute="centerX" id="LDm-1K-yWe"/>
+                            <constraint firstItem="yd2-X2-mdd" firstAttribute="leading" secondItem="i9f-Ga-fFg" secondAttribute="leadingMargin" id="UFM-cL-wWs"/>
+                            <constraint firstItem="tFU-4X-zYX" firstAttribute="centerX" secondItem="i9f-Ga-fFg" secondAttribute="centerX" id="XdQ-Br-DBb"/>
+                            <constraint firstItem="Rf4-Kt-D1a" firstAttribute="top" secondItem="yd2-X2-mdd" secondAttribute="bottom" constant="5" id="boW-ke-0hi"/>
+                            <constraint firstItem="Rf4-Kt-D1a" firstAttribute="centerX" secondItem="i9f-Ga-fFg" secondAttribute="centerX" id="cQ5-96-zTg"/>
+                            <constraint firstItem="yd2-X2-mdd" firstAttribute="trailing" secondItem="i9f-Ga-fFg" secondAttribute="trailingMargin" id="k7h-RF-t2z"/>
+                            <constraint firstItem="yd2-X2-mdd" firstAttribute="top" secondItem="PJh-rF-D2E" secondAttribute="bottom" constant="15" id="mpK-t3-9W7"/>
+                            <constraint firstItem="yd2-X2-mdd" firstAttribute="centerX" secondItem="i9f-Ga-fFg" secondAttribute="centerX" id="zNz-fQ-yQb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="UVA Things to Do" id="5nU-kw-QMZ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="KdQ-li-Xiv"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="NextLevelLabel" destination="Rf4-Kt-D1a" id="lla-gr-jIP"/>
+                        <outlet property="ProgressCoinPhoto" destination="PJh-rF-D2E" id="LPt-6t-tl7"/>
+                        <outlet property="ProgressDescriptionLabel" destination="yd2-X2-mdd" id="WxU-KX-8JA"/>
+                        <outlet property="ProgressLabel" destination="tFU-4X-zYX" id="sEo-Oz-rTO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ynq-pd-zK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3980" y="354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IJf-zv-1l3">
@@ -251,4 +331,7 @@
             <point key="canvasLocation" x="1761" y="346"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="h9i-4D-g0O"/>
+    </inferredMetricsTieBreakers>
 </document>
