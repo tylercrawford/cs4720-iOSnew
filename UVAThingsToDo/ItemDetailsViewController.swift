@@ -11,11 +11,12 @@ import AVFoundation
 import CoreData
 import CoreLocation
 
-class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate, CLLocationManagerDelegate {
+class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate, CLLocationManagerDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var locationManager: CLLocationManager?
     
     var audioPlayer:AVAudioPlayer!
+    var imagePicker: UIImagePickerController!
     var itemTitle = "hi there"
     var itemDescription = "hello"
     var index = 0
@@ -29,29 +30,54 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate, CLLoca
     @IBOutlet weak var LatitudeLabel: UILabel!
     @IBOutlet weak var LongitudeLabel: UILabel!
     @IBOutlet weak var CompletedButton: UIButton!
+    @IBOutlet weak var PhotoView: UIImageView!
+    @IBOutlet weak var PhotoButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scrollView.contentSize = CGSizeMake(50, 50);
         let fetchRequest = NSFetchRequest(entityName: "Item")
         do {
             let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
             for item in items {
                 if item.item_title == itemTitle {
                     ItemTitleLabel.text! = itemTitle
+                    ItemTitleLabel.font = UIFont.boldSystemFontOfSize(16.0)
                     ItemDescriptionLabel.text! = item.item_description!
                     
                     if item.item_completed == 1 {
                         LatitudeLabel.text = "Latitude: " + String(item.item_latitude!)
                         LongitudeLabel.text = "Longitude: " + String(item.item_longitude!)
                         CompletedButton.hidden = true
+                        PhotoButton.hidden = false
+                        if (item.item_image != nil) {
+                            PhotoView.image = UIImage(data: item.item_image!)
+                        } else {
+                            let img = UIImage(named: "UVA_Rotunda")
+                            PhotoView.image = img
+                        }
                     } else {
                         LatitudeLabel.hidden = true
                         LongitudeLabel.hidden = true
                         ShareButton.hidden = true
+                        PhotoButton.hidden = true
+                        let img = UIImage(named: "UVA_Rotunda")
+                        PhotoView.image = img
                     }
                 }
             }
+            
+            var constraints = [NSLayoutConstraint]()
+            
+            constraints.append(NSLayoutConstraint(item: PhotoView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0))
+            constraints.append(NSLayoutConstraint(item: PhotoButton, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0))
+            constraints.append(NSLayoutConstraint(item: ShareButton, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0))
+            constraints.append(NSLayoutConstraint(item: CompletedButton, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0))
+            
+            NSLayoutConstraint.activateConstraints(constraints)
         } catch let error as NSError {
             print (error)
         }
@@ -179,6 +205,7 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate, CLLoca
             print (error)
         }
         
+        PhotoButton.hidden = false
         CompletedButton.hidden = true
         LatitudeLabel.hidden = false
         LongitudeLabel.hidden = false
@@ -216,6 +243,35 @@ class ItemDetailsViewController: UIViewController, AVAudioPlayerDelegate, CLLoca
         presentViewController(activityViewController, animated: true, completion :{})
     }
     
+    @IBAction func takePhoto(sender: UIButton) {
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .Camera
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        PhotoView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        let fetchRequest = NSFetchRequest(entityName: "Item")
+        do {
+            let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
+            for item in items {
+                if item.item_title == itemTitle {
+                    item.item_image = UIImageJPEGRepresentation(info[UIImagePickerControllerOriginalImage] as! UIImage, 1)
+                    do{
+                        try managedObjectContext.save()
+                    } catch let error as NSError{
+                        print("Failed to save the new person. Error = \(error)")
+                    }
+                }
+            }
+        } catch let error as NSError {
+            print (error)
+        }
+    }
     
 
     /*

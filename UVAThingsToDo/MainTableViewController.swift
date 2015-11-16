@@ -68,7 +68,6 @@ class MainTableViewController: UITableViewController {
         var first = true
         do {
             let items = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Item]
-            print(items)
             for item in items {
                 if (first) {
                     if item.item_completed == 1 && item.item_index == row {

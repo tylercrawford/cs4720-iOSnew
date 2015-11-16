@@ -4,7 +4,7 @@
         <attribute name="item_completed" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="item_date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="item_description" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="item_image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="item_image" optional="YES" attributeType="Binary" valueTransformerName="transformable_image" syncable="YES"/>
         <attribute name="item_index" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="item_latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="item_longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
